@@ -81,10 +81,8 @@ const Hero = () => {
             variants={fadeIn("up", "tween", 0.5, 2)}
             className={`${styles.paragraph} max-w-[570px] mt-5 ss:px-1 z-[999] text-justify mx-5 pt-[70px]`}
           >
-            The DJI Mavic Air 2 is a cutting-edge drone designed for
-            professional and recreational use. With its 48-megapixel camera, 4K
-            video recording, and 3-axis gimbal, the Mavic Air 2 captures
-            stunning aerial footage with exceptional clarity and stability.
+            Ultrafuturietic Drone Technology meets minimal design in an Apple-like style of the Tolle Labs drone concept, 
+            set aganscist a stark white background with clean fonts, on a modern landing page developed by openAI.
           </motion.p>
         </div>
       </motion.div>

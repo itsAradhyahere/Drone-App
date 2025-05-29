@@ -3,9 +3,7 @@ import styles, { layout } from "../styles/style";
 import Button from "./Button";
 import {
   textVariant,
-  slideIn,
   fadeIn,
-  textVariant2,
   staggerContainer,
 } from "../utils/motion.js";
 import { motion } from "framer-motion";
@@ -19,7 +17,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
     <div
       className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}
     >
-      <img src={icon} alt="star" className="w-[50%] h-[50%] object-contain" />
+      <img src={icon} alt="icon" className="w-[50%] h-[50%] object-contain" />
     </div>
     <div className="flex-1 flex flex-col ml-3">
       <h4 className="font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1">
@@ -45,7 +43,7 @@ const Business = () => (
       className={layout.sectionInfo}
     >
       <motion.h2 variants={textVariant(1.1)} className={styles.heading2}>
-        Unleash Your Creativity , <br className="sm:block hidden" /> with
+        Unleash Your Creativity,<br className="sm:block hidden" /> with
         High-Tech Drones for Aerial Photography and Videography.
       </motion.h2>
 
@@ -60,13 +58,40 @@ const Business = () => (
         flying, our drones are up for the task. Shop now and take your
         photography and videography to new heights!
       </motion.p>
+
       <motion.div
         variants={fadeIn("up", "tween", 0.5, 2)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
       >
-        <Button styles={`mt-10`} />
+        <Button styles="mt-10" />
+      </motion.div>
+
+      {/* Specifications Section */}
+      <motion.div
+        variants={fadeIn("up", "tween", 0.6, 2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="mt-10 grid sm:grid-cols-2 gap-6 bg-[#1a1a1a] p-6 rounded-[20px] shadow-lg border border-gray-700"
+      >
+        <div>
+          <h3 className="text-white font-semibold text-[18px] mb-2">Flight Time</h3>
+          <p className="text-dimWhite text-[16px]">60 mins</p>
+        </div>
+        <div>
+          <h3 className="text-white font-semibold text-[18px] mb-2">Range</h3>
+          <p className="text-dimWhite text-[16px]">10 miles</p>
+        </div>
+        <div>
+          <h3 className="text-white font-semibold text-[18px] mb-2">Camera</h3>
+          <p className="text-dimWhite text-[16px]">4K</p>
+        </div>
+        <div>
+          <h3 className="text-white font-semibold text-[18px] mb-2">Obstacle Avoidance</h3>
+          <p className="text-dimWhite text-[16px]">Yes</p>
+        </div>
       </motion.div>
     </motion.div>
 
